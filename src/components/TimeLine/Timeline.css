@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.experience-container{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfc3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'lato', sans-serif;
+    margin: 0;
+    width: 100%;
+}
+
+.timeline-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 40px 0;
+}
+
+.timeline-container::after{
+    background-color: #e17b77;
+    content: '';
+    position: absolute;
+    left: calc(50% - 2px);
+    width: 4px;
+    height: 100%;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 30px;
+    margin:10px 0;
+    width: 42%;
+}
+
+.timeline-item:nth-child(odd){
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-right: 0px;
+    padding-left: 30px;
+}
+
+.timeline-item-content {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 3);
+    min-width: 50vh;
+    padding: 15px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+@media screen and (max-width: 768px){
+    .timeline-item-content {
+        min-width: min(32vh, 32vw);
+    }
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content{
+    text-align: left;
+    align-items: flex-start;
+}
+
