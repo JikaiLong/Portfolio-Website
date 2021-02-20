@@ -12,7 +12,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-
+    padding-top: 20px;
 	min-height: 100vh;
 	font-family: 'Lato', sans-serif;
 	margin: 0;
@@ -68,7 +68,7 @@ h1 {
     align-items: flex-end;
     padding: 15px;
     position: relative;
-    width: 800px;
+    width: 1000px;
     max-width: 70%;
     text-align: right;
 }
@@ -121,7 +121,7 @@ h1 {
     font-size: 16px;
     line-height: 24px;
     margin: 15px 0;
-    max-width: 350px;
+    max-width: 500px;
 }
 
 .timeline-item-content a {
@@ -160,13 +160,13 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
     .timeline-item-content,
     .timeline-item:nth-child(odd) .timeline-item-content {
         padding: 15px 10px;
         text-align: center;
         align-items: center;
-        width: 400px;
+        width: 550px;
     }
 
     .timeline-item-content .tag {
@@ -190,6 +190,91 @@ h1 {
         margin-top: 20px;
         padding-top: 10px;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    .timeline-item-content,
+    .timeline-item:nth-child(odd) .timeline-item-content {
+        padding: 15px 10px;
+        text-align: center;
+        align-items: center;
+        width: 90%;
+    }
+    .timeline-container::after {
+        background-color:#fff;
+        content: '';
+        position: absolute;
+        left: 4px;
+        width: 4px;
+        height: 100%;
+    }
+    .timeline-item-content .circle {
+        background-color: #fff;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        z-index: 100;
+        animation: none;
+    }
+
+    .timeline-item-content .tag {
+        width: calc(100%);
+        text-align: center;
+    }
+
+    .timeline-item-content time {
+        margin-top: 20px;
+    }
+
+    .timeline-item-content a {
+        text-decoration: underline;
+    }
+
+    .timeline-item-content a::after {
+        display: none;
+    }
+    .timeline-item-content .job-title{
+
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+    .timeline-item-content::after {
+
+        width: 0px;
+        height: 0px;
+    }
+    
+    
+    .timeline-item:nth-child(odd) .timeline-item-content::after {
+        right: auto;
+        left: -7.5px;
+    }
+    .timeline-item {
+        display: flex;
+        justify-content: none;
+        padding-right: none;
+        position: relative;
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        align-self: none;
+        justify-content: none;
+        padding-left: none;
+        padding-right: 0;
+    }
+
+    .experience-container {
+        min-height: 150vh;
+        margin-bottom: 30px;
+        background-image: none;
+        max-width: 100%;
+    }
+
+    
 }
 
 @keyframes ripple {
