@@ -32,6 +32,7 @@ h1 {
     flex-direction: column;
     position: relative;
     margin: 40px 0;
+
 }
 
 .timeline-container::after {
@@ -198,25 +199,25 @@ h1 {
         padding: 15px 10px;
         text-align: center;
         align-items: center;
-        width: 90%;
+        width: 100%;
     }
     .timeline-container::after {
         background-color:#fff;
         content: '';
-        position: absolute;
-        left: 4px;
-        width: 4px;
+        position: relative;
+        left: 0px;
+        width: 0px;
         height: 100%;
     }
     .timeline-item-content .circle {
         background-color: #fff;
         border: 3px solid #fff;
         border-radius: 50%;
-        position: absolute;
+        position: relative;
         top: calc(50% - 10px);
         right: -40px;
-        width: 20px;
-        height: 20px;
+        width: 0px;
+        height: 0px;
         z-index: 100;
         animation: none;
     }
@@ -256,17 +257,20 @@ h1 {
     .timeline-item {
         display: flex;
         justify-content: none;
-        padding-right: none;
+        padding-right: 0px;
+        padding-left: 0px;
         position: relative;
         margin: 10px 0;
         width: 100%;
+        align-items: center;
     }
     
     .timeline-item:nth-child(odd) {
         align-self: none;
         justify-content: none;
-        padding-left: none;
-        padding-right: 0;
+        padding-left:0px;
+        padding-right: 0px;
+        align-items: center;
     }
 
     .experience-container {

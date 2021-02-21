@@ -132,3 +132,15 @@ h1 {
   content: ' ►';
   font-size: 12px;
 }
+
+@media only screen and (max-width: 600px) {
+  .cards-overall-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+}
+
+  .card-item{
+    max-width: 550px;
+  }
+}
